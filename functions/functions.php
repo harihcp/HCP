@@ -147,6 +147,7 @@ function getCaseDetails($sfid){
     global $dbconn;
     if ($connect = dbConnect()) {
         $resultDetails = pg_query($dbconn, "SELECT * FROM salesforce.case WHERE contactid='$sfid';");
+        return $resultDetails;
         if ($resultDetails) {
             while($resultRows = pg_fetch_array($resultDetails)){
                 $rows[]=$resultRows;
