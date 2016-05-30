@@ -161,6 +161,7 @@
                                 <tbody>
                                 <?php
                                 $results = getCaseDetails($_SESSION['contact_sfid']);
+                                echo $results;
                                 $i = 1;
 
 
