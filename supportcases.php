@@ -63,6 +63,7 @@
 
     <ul>
       <?php
+      include_once("functions/functions.php");
             session_start();
             if (isset($_SESSION['username'])) {
                 ?>
@@ -337,7 +338,6 @@
 <script type="text/javascript" src="js/notify.js"></script>
 <!--<script src="js/subscription.js"></script>-->
 <?php
-include_once("functions/functions.php");
 if (isset($_POST['newsletter'])) {
   //Post Values
   $email = pg_escape_string($_POST['email']);
